@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "cypress": "^13.6.6"
+  },
+  "scripts": {
+    "test:dashboard": "npx cypress run --record --key 0dfab30b-1507-46c4-b2b1-5ad67b64c663 --browser chrome"
+  }
+}
