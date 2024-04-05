@@ -4,5 +4,8 @@
   },
   "scripts": {
     "test:dashboard": "npx cypress run --record --key 0dfab30b-1507-46c4-b2b1-5ad67b64c663 --browser chrome"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.4"
   }
 }
