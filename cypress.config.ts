@@ -5,7 +5,7 @@ import * as dotenv from "dotenv"
 dotenv.config()
 
 export default defineConfig({
-  projectId: 'nj2ibf',
+  projectId: process.env.PROJECT_ID,
   e2e: {
     setupNodeEvents(on, config) {
       allureCypress(on);

@@ -6,6 +6,7 @@ jobs:
     runs-on: windows-latest
     env:
       CLOUD_KEY: ${{ secrets.CLOUD_KEY }}
+      PROJECT_KEY: ${{ secrets.PROJECT_ID }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
