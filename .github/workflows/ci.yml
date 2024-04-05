@@ -14,5 +14,5 @@ jobs:
         with:
           browser: chrome
           runTests: false
-      - run: npx cypress run --record --key $CLOUD_KEY
+      - run: npx cypress run --record --key ${{ secrets.CLOUD_KEY }}
 
