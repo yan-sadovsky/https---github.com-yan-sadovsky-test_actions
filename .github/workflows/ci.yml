@@ -1,0 +1,20 @@
+name: Cypress Actions
+run-name: ${{ github.actor }} Cypress Test Pipeline
+on: workflow_dispatch
+jobs:
+  cypress-test-run:
+    runs-on: windows-latest
+    env:
+      CLIENT_ID: ${{ secrets.CLIENT_ID }}
+      CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: node-install  
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Cypress run
+        uses: cypress-io/github-action@v6  
+      - run: npm ci
+      - run: npm run test:dashboard
