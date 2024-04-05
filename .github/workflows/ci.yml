@@ -4,6 +4,8 @@ on: workflow_dispatch
 jobs:
   cypress-test-run:
     runs-on: windows-latest
+    env:
+      CLOUD_KEY: ${{ secrets.CLOUD_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -12,5 +14,5 @@ jobs:
         with:
           browser: chrome
           runTests: false
-      - run: npm run test:dashboard
+      - run: npx cypress run --record --key $CLOUD_KEY
 

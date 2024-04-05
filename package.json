@@ -3,9 +3,13 @@
     "cypress": "^13.6.6"
   },
   "scripts": {
+    "test:allure": "npx cypress run & allure serve",
     "test:dashboard": "npx cypress run --record --key 0dfab30b-1507-46c4-b2b1-5ad67b64c663 --browser chrome"
   },
   "devDependencies": {
+    "allure-commandline": "^2.27.0",
+    "allure-cypress": "^2.15.0",
+    "dotenv": "^16.4.5",
     "typescript": "^5.4.4"
   }
 }
